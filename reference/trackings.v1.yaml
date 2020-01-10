@@ -28,6 +28,14 @@ paths:
                 example-1: {}
       operationId: get-trackings
       description: get trackings
+      parameters:
+        - schema:
+            type: string
+            maxLength: 0
+          in: query
+          name: slug
+          description: tracking slug
+          required: true
     post:
       summary: create tracking
       tags:
@@ -42,6 +50,9 @@ paths:
                 properties:
                   id:
                     type: string
+                    format: uuid
+                required:
+                  - id
               examples:
                 example-1:
                   value:
@@ -62,6 +73,7 @@ paths:
               type: object
               properties: {}
         description: ''
+      parameters: []
 components:
   schemas:
     tracking:
