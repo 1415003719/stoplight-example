@@ -1,0 +1,26 @@
+{
+  "name": "stoplight-example",
+  "version": "1.0.0",
+  "description": "stoplight example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1415003719/stoplight-example.git"
+  },
+  "keywords": [
+    "stoplight"
+  ],
+  "author": "Watson ZUO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1415003719/stoplight-example/issues"
+  },
+  "homepage": "https://github.com/1415003719/stoplight-example#readme",
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0"
+  }
+}
