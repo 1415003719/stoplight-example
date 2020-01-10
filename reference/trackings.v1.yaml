@@ -1,0 +1,82 @@
+openapi: 3.0.0
+info:
+  title: Trackings
+  version: '1.0'
+  description: Tracking api descriptions
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /trackings:
+    get:
+      summary: get trackings
+      tags:
+        - tracking
+      responses:
+        '200':
+          description: OK
+          headers: {}
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  trackings:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/tracking'
+              examples:
+                example-1: {}
+      operationId: get-trackings
+      description: get trackings
+    post:
+      summary: create tracking
+      tags:
+        - tracking
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+              examples:
+                example-1:
+                  value:
+                    id: dadaffkmaklnfakfnaflvmvav
+      operationId: post-trackings
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                slug:
+                  type: string
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+        description: ''
+components:
+  schemas:
+    tracking:
+      title: tracking
+      type: object
+      properties:
+        id:
+          type: string
+        slug:
+          type: string
+      x-examples:
+        example:
+          id: ajdajdajfbifbuafhldainfdaao
+          slug: sf-express
+      description: tracking response object
+  securitySchemes:
+    aftership-api-key:
+      name: aaknakjfbjkbhifbakhdbajkdbak;bd
+      type: apiKey
+      in: header
