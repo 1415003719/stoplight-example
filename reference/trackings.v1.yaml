@@ -55,6 +55,8 @@ paths:
               properties:
                 slug:
                   type: string
+              required:
+                - slug
           application/xml:
             schema:
               type: object
